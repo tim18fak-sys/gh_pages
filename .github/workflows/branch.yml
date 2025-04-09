@@ -40,7 +40,7 @@ jobs:
       # Merge main into gh_pages
       - name: Merge main into gh-pages
         run: |
-         git merge origin/main --allow-unrelated-histories --no-ff --no-commit
+         git merge origin/main --allow-unrelated-histories --no-ff --no-commit || echo "Merge conflict detected"
       # You could add automatic conflict resolution here if needed.
 
       # If merge has changes, commit them
