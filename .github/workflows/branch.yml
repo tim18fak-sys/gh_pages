@@ -40,7 +40,7 @@ jobs:
       # Merge main into gh_pages
       - name: Merge main into gh-pages
         run: |
-          git merge main  --allow-unrelated-historiess
+          git merge main  --allow-unrelated-histories
 
       # If merge has changes, commit them
       - name: Commit changes
