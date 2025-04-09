@@ -1,0 +1,32 @@
+*::before,*,*::after{
+   padding: 0;
+   margin: 0;
+   
+}
+html{
+    background-color: black;
+}
+body{
+    color: white
+}
+li{
+    list-style: none;
+}
+/* the class utilies */
+.nav_container{
+    display: flex;
+    gap: 3rem;
+    padding: 1rem 2rem;
+    align-items: center;
+}
+.nav_list_container{
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    align-items: center;
+}
+.nav_list_container li:hover{
+    color: blue;
+    /* border: 10px; */
+    border-color: aquamarine;
+}
