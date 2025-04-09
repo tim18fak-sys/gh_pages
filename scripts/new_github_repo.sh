@@ -26,6 +26,7 @@ link() {
     read -p "Enter your commit message: " COMMIT_MESSAGE
     git commit -m "$COMMIT_MESSAGE"
 
+
     # Set main branch
     git branch -M main
     echo "Main branch has been created"
