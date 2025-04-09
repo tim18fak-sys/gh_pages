@@ -22,10 +22,15 @@ jobs:
           git clone https://github.com/tim18fak-sys/gh_pages.git
           cd gh_pages
 
-      # Checkout gh_pages branch and merge main branch into it
+      # Fetch all remote branches and checkout gh_pages branch
+      - name: Checkout gh_pages branch
+        run: |
+          git fetch origin
+          git checkout gh_pages || git checkout -b gh_pages
+
+      # Merge main into gh_pages
       - name: Merge main into gh_pages
         run: |
-          git checkout gh_pages
           git fetch origin main
           git merge origin/main --no-ff --no-commit
 
