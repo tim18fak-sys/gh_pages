@@ -22,6 +22,12 @@ jobs:
           git clone https://github.com/tim18fak-sys/gh_pages.git
           cd gh_pages
 
+      # Set Git configuration for user
+      - name: Set git user config
+        run: |
+          git config --global user.email "${{ secrets.EMAIL }}"
+          git config --global user.name "${{ secrets.NAME }}"
+
       # Fetch all remote branches and checkout gh_pages branch
       - name: Checkout gh_pages branch
         run: |
