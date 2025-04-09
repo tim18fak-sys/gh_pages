@@ -50,4 +50,4 @@ jobs:
       # Push the changes to the gh_pages branch
       - name: Push changes to gh_pages
         run: |
-          git push https://${{ secrets.GITHUB_TOKEN }}@github.com/tim18fak-sys/gh_pages.git gh_pages
+          git push gh_pages
