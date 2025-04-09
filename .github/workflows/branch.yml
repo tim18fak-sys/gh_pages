@@ -35,20 +35,18 @@ jobs:
       - name: Checkout gh_pages branch
         run: |
           git fetch origin
-          git checkout gh_pages || git checkout -b gh_pages
+          git checkout gh_pages
 
       # Merge main into gh_pages
       - name: Merge main into gh_pages
         run: |
-          git fetch origin main
-          git merge origin/main --no-ff --no-commit
+          git merge main
 
       # If merge has changes, commit them
       - name: Commit changes
         run: |
           git add .
-          git status
-          git diff --cached --quiet || git commit -m "Merge completed from main to gh_pages"
+          git commit -m "Merge completed from main to gh_pages"
 
       # Push the changes to the gh_pages branch
       - name: Push changes to gh_pages
