@@ -1,0 +1,22 @@
+name: Merge to gh_pages and trigger deployment
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+# now define the jobs
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: merge main branch to gh_page branch
+        uses: devmasx/merge-branch@master
+        with:
+          type: now
+          from_branch: main
+          target_branch: gh_pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
