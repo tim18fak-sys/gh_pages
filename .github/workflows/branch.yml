@@ -10,7 +10,7 @@ on:
 # adding write permission for the github bot
 permissions:
   contents: write
-
+  workflows: write
 jobs:
   merge:
     runs-on: ubuntu-latest
